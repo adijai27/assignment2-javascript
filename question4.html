@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function anagram(str_1, str_2) {
+        if (str_1.length == str_2.length) {
+          for (var i = 0; i < anagram.length; i++) {
+            if (!str_2.includes(str_1[i])) return false;
+          }
+          return true;
+        }
+        return false;
+      }
+      console.log(anagram("HELLO", "JELLO"));
+
+      function anagrams2(st1, st2) {
+        if (st1.length != st2.length) {
+          return false;
+        }
+        st1 = st1.toUpperCase();
+        st2 = st2.toUpperCase();
+        let li1 = st1.split("").sort();
+        let li2 = st2.split("").sort();
+        let stn1 = li1.join("");
+        let stn2 = li2.join("");
+        if (stn1 == stn2) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(anagrams2("HELLO", "JELLO"));
+    </script>
+  </body>
+</html>
